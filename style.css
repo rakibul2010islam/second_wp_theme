@@ -1,0 +1,74 @@
+/*
+Theme Name: Second WP Theme
+Author: Md. Rakibul Islam
+Author URI: http://www.rakibul2010islam.com
+Version: 1.0
+*/
+.container {
+  margin: 1% 5%; }
+
+header .site-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  header .site-info .header-info {
+    display: flex;
+    align-items: center;
+    color: black; }
+    header .site-info .header-info div:last-child {
+      margin-left: 20px; }
+  header .site-info .header-info a {
+    text-decoration: none;
+    color: black; }
+  header .site-info form .field, header .site-info form .submit {
+    padding: 5px; }
+  header .site-info form .submit {
+    background: #4CAF50;
+    border: none;
+    padding: 7px 10px; }
+  header .site-info form .submit:hover {
+    border: 1px solid black;
+    padding: 6px 9px;
+    cursor: pointer; }
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: 5%;
+  font-size: 1.2rem; }
+  header nav ul a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: #4b5320; }
+    header nav ul a:hover {
+      color: black; }
+
+body .container header nav {
+  background: #9dd6ca;
+  margin: -1% -6.3%; }
+
+.homepage-image {
+  margin: -1.7% -6.3%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.featured-texts {
+  color: white;
+  text-align: center;
+  padding: 50px; }
+  .featured-texts h1 {
+    font-size: 200%; }
+  .featured-texts p {
+    font-size: 120%; }
+  .featured-texts input {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5%; }
+  .featured-texts input:hover {
+    background: black;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
