@@ -6,6 +6,13 @@
 
 	add_action('wp_enqueue_scripts', 'theme_resources');
 
+	// Customize excerpt word count length
+	function custom_excerpt_length(){
+		return 78;
+	}
+
+	add_filter('excerpt_length', 'custom_excerpt_length');
+
 
 	// Theme Setup
 	function core_setup(){
@@ -17,7 +24,7 @@
 
 		// Add featured image support
 		add_theme_support('post-thumbnails');
-		add_image_size('small-thumbnail', 180, 120, true);
+		add_image_size('front-thumbnail', 300, 150, true);
 		add_image_size('banner-image', 920, 210, array('left', 'top'));
 
 		// Add Post Format Support

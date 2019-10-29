@@ -71,4 +71,38 @@ body .container header nav {
     background: black;
     color: white; }
 
+.home-columns {
+  margin-top: 50px;
+  display: flex; }
+  .home-columns article {
+    flex-basis: 30%;
+    margin: 2%;
+    text-align: justify; }
+    .home-columns article .post-thumbnail {
+      text-align: center; }
+
+.post-info {
+  color: #625b62; }
+
+.footer-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px;
+  margin-top: 50px;
+  margin-right: 5px;
+  color: #353c44; }
+
+.menu-footer-menu-links-container ul {
+  list-style: none; }
+.menu-footer-menu-links-container li {
+  display: inline;
+  padding: 0 30px; }
+.menu-footer-menu-links-container li a {
+  text-decoration: none;
+  color: #353c44; }
+.menu-footer-menu-links-container li a:hover {
+  text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */
