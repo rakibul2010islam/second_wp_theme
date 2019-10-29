@@ -23,7 +23,7 @@
 
 	<?php 
 
-		$args = array( 'post_type'   => 'post');
+		$args = array( 'post_type'   => 'post', 'posts_per_page' => '4');
 		$all_posts = new WP_Query( $args );
 
 	 ?>
@@ -39,6 +39,8 @@
 	<?php else: ?>
 		<?php echo wpautop("No posts found"); ?>
 	<?php endif; ?>
+
+	<?php wp_reset_postdata(); ?>
 
 </div>
 

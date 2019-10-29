@@ -102,3 +102,54 @@ body .container header nav{
 		color: white;
 	}
 }
+
+.home-columns{
+	margin-top: 50px;
+	display: flex;
+	article{
+		flex-basis: 30%;
+		margin: 2%;
+		text-align: justify;
+		.post-thumbnail{
+			text-align: center;
+		}
+	}
+}
+
+// Post Meta information texts
+.post-info{
+	color: #625b62;
+}
+
+// Footer styling
+
+.footer-content{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px 20px;
+	margin-top: 50px;
+	margin-right: 5px;
+	color: #353c44;
+}
+
+
+.menu-footer-menu-links-container{
+	ul{
+		list-style: none;
+	}
+	li{
+		display: inline;
+		padding: 0 30px;
+	}
+
+	li a{
+		text-decoration: none;
+		color: #353c44;
+	}
+
+	li a:hover{
+		text-decoration: underline;
+	}
+}
