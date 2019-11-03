@@ -15,7 +15,7 @@
 		<?php if(is_search() OR is_archive() OR is_front_page()): ?>
 			<?php echo get_the_excerpt(); ?>
 		<?php else: ?>
-			<?php the_content(); ?>
+			<?php the_excerpt(); ?>
 		<?php endif; ?>
 		
 		<a href="<?php the_permalink(); ?>">Read More &raquo</a>

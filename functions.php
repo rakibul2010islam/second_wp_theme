@@ -87,5 +87,17 @@
 
 	add_action('customize_register', 'homepage_image');
 
+	// Adding Widget on Blog page
+	function init_widgets(){
+		register_sidebar(array(
+			'name' => 'Sidebar',
+			'id' => 'sidebar1',
+			'before_widget' => '<div class="widget-item">',
+			'after_widget' => '</div>'
+		));
+	}
+
+	add_action('widgets_init', 'init_widgets');
+
 
  ?>

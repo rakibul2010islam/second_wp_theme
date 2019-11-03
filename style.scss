@@ -4,9 +4,13 @@ Author: Md. Rakibul Islam
 Author URI: http://www.rakibul2010islam.com
 Version: 1.0
 */
+body{
+	margin-bottom: 0;
+}
 
 .container{
 	margin: 1% 5%;
+	margin-bottom: 0;
 }
 
 // Header Codes Start from here
@@ -121,14 +125,23 @@ body .container header nav{
 	color: #625b62;
 }
 
+.post a{
+	text-decoration: none;
+}
+
 // Footer styling
+
+.footer-background{
+	background: #d9d9d9;
+	margin: 0 -70px;
+}
 
 .footer-content{
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
-	margin: 0px 20px;
+	margin: 0px 30px;
 	margin-top: 50px;
 	margin-right: 5px;
 	color: #353c44;
@@ -151,5 +164,34 @@ body .container header nav{
 
 	li a:hover{
 		text-decoration: underline;
+	}
+}
+
+// Dividing main column for widget
+.main-column{
+	display: flex;
+	.left-column{
+		flex-basis: 70%;
+		padding-right: 20px;
+		border-right: 1px dashed black;
+	}
+
+	.right-column{
+		margin-left: 30px;
+	}
+
+	.widget-item{
+		ul li{
+			margin: 5px;
+			font-size: 1.1em;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
 	}
 }

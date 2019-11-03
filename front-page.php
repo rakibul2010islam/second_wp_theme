@@ -23,15 +23,18 @@
 
 	<?php 
 
-		$args = array( 'post_type'   => 'post', 'posts_per_page' => '4');
+		$args = array( 'post_type'   => 'post', 'posts_per_page' => '-1' );
 		$all_posts = new WP_Query( $args );
 
 	 ?>
+	
+	<?php $counter = 0; ?>
 
 	<?php if($all_posts->have_posts()): ?>
 		<?php while($all_posts->have_posts()): $all_posts->the_post();?>
-			<?php if(has_post_thumbnail()): ?>
+			<?php if(has_post_thumbnail() && $counter < 3): ?>
 				<?php get_template_part('content', get_post_format()); ?>
+				<?php $counter = $counter + 1; ?>
 			<?php endif; ?>
 		<?php endwhile; ?>
 
