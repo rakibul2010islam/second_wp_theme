@@ -1,24 +1,22 @@
-<article class="post">
+<article class="post <?php if(has_post_thumbnail() && (is_home() OR is_search() OR is_archive())): ?> newdisplay <?php endif; ?>">
 
 	<div class="post-thumbnail">
 		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('front-thumbnail'); ?> </a>
 	</div>
 
-	<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+	<div class="<?php if(has_post_thumbnail() && (is_home() OR is_search() OR is_archive())): ?> text-post <?php endif; ?>">
 
-	<p class="post-info">
-		<?php the_time('F j, Y g:i a'); ?> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
-	</p>
+		<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
-	<p>
+		<p class="post-info">
+			<?php the_time('F j, Y g:i a'); ?> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
+		</p>
 
-		<?php if(is_search() OR is_archive() OR is_front_page()): ?>
+		<p>
+
 			<?php echo get_the_excerpt(); ?>
-		<?php else: ?>
-			<?php the_content(); ?>
-		<?php endif; ?>
-		
-		<a href="<?php the_permalink(); ?>">Read More &raquo</a>
-	</p>
-	
+			
+			<a href="<?php the_permalink(); ?>">Read More &raquo</a>
+		</p>
+	</div>
 </article>

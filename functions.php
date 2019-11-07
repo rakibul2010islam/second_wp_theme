@@ -33,6 +33,18 @@
 
 	add_action('after_setup_theme', 'core_setup');
 
+	// Adding Widget Locations
+	function init_widgets(){
+		register_sidebar(array(
+			'name' => 'Sidebar',
+			'id' => 'sidebar1',
+			'before_widget' => '<div class="widget-item">',
+			'after_widget' => '</div>'
+		));
+	}
+
+	add_action('widgets_init', 'init_widgets');
+
 	// Add homepage centered background image
 	function homepage_image($wp_customize){
 		$wp_customize->add_section('homepage-image-section', array(

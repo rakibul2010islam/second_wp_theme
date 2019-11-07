@@ -23,19 +23,20 @@
 
 	<?php 
 
-		$args = array( 'post_type'   => 'post', 'posts_per_page' => '4');
+		$args = array( 'post_type'   => 'post', 'posts_per_page' => '-1');
 		$all_posts = new WP_Query( $args );
+		$postcount = 0;
 
 	 ?>
 
 	<?php if($all_posts->have_posts()): ?>
 		<?php while($all_posts->have_posts()): $all_posts->the_post();?>
-			<?php if(has_post_thumbnail()): ?>
+			<?php if(has_post_thumbnail() && ($postcount < 3)): ?>
+				<?php $postcount = $postcount + 1;  ?>
 				<?php get_template_part('content', get_post_format()); ?>
 			<?php endif; ?>
 		<?php endwhile; ?>
 
-		<?php echo paginate_links(); ?>
 	<?php else: ?>
 		<?php echo wpautop("No posts found"); ?>
 	<?php endif; ?>
