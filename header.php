@@ -5,6 +5,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
 	<title><?php bloginfo('name'); ?></title>
+	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
 	<style type="text/css">
 		.logo {
 		   background: #FFF url(<?php echo $variable_holding_img_url; ?>);

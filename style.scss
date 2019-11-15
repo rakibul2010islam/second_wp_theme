@@ -6,6 +6,7 @@ Version: 1.0
 */
 body{
 	margin-bottom: 0;
+	font-family: 'Catamaran', sans-serif;
 }
 .container{
 	margin: 1% 5%;
@@ -128,6 +129,10 @@ article.post a{
 	text-decoration: none;
 }
 
+article h2{
+	margin-bottom: 0;
+}
+
 // Footer styling
 
 .footer-content{
@@ -198,4 +203,57 @@ article.post a{
 
 .text-post{
 	margin-left: 25px;
+}
+
+// Single Post Styling
+.singlepost{
+	margin-top: 50px;
+}
+
+// About Author Styling
+
+.about-author{
+	margin-top: 50px;
+	border: 1px dashed black;
+	width: 50%;
+	background: #ededed;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+.about-author-text{
+	margin-left: 30px;
+}
+
+.about-author-image{
+	position: relative;
+}
+
+.nickname{
+	position: absolute;
+	color: white;
+	top: 174px;
+	background: rgba(0, 0, 0, .5);
+	width: 100%;
+	text-align: center;
+}
+
+.other-posts-by{
+	h4{
+		margin-bottom: 0;
+	}
+	ul{
+		margin-top: 0;
+	}
+}
+
+.view-post a{
+	color: blue;
 }
