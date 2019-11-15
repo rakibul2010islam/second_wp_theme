@@ -25,7 +25,7 @@
 		// Add featured image support
 		add_theme_support('post-thumbnails');
 		add_image_size('front-thumbnail', 300, 150, true);
-		add_image_size('banner-image', 920, 210, array('left', 'top'));
+		add_image_size('banner-image', 1080, 210, array('left', 'top'));
 
 		// Add Post Format Support
 		add_theme_support('post-formats', array('aside', 'gallery', 'link'));
