@@ -180,4 +180,14 @@ article h2 {
 .view-post a {
   color: blue; }
 
+.current-menu-item a {
+  color: black; }
+
+.current_page_item a {
+  border-bottom: 2px solid black; }
+
+.current-page-ancestor a {
+  border-bottom: 2px solid black;
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */

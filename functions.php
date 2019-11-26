@@ -6,6 +6,19 @@
 
 	add_action('wp_enqueue_scripts', 'theme_resources');
 
+	// Get top ancestor
+	function get_top_ancestor_id(){
+		global $post;
+
+		if($post->post_parent){
+			$ancestors = array_reverse(get_post_ancestors($post->ID));
+			return $ancestors[0];
+		}
+
+		return $post->ID;
+	}
+
+
 	// Customize excerpt word count length
 	function custom_excerpt_length(){
 		return 78;
@@ -25,6 +38,7 @@
 		// Add featured image support
 		add_theme_support('post-thumbnails');
 		add_image_size('front-thumbnail', 300, 150, true);
+		add_image_size('blog-thumbnail', 300, 250, true);
 		add_image_size('banner-image', 1080, 210, array('left', 'top'));
 
 		// Add Post Format Support

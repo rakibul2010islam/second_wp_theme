@@ -257,3 +257,22 @@ article h2{
 .view-post a{
 	color: blue;
 }
+
+// Author Styling ends here
+
+
+// Current menu item styling
+.current-menu-item a{
+	color: black;
+}
+
+// Current page item styling
+
+.current_page_item a{
+	border-bottom: 2px solid black;
+}
+
+.current-page-ancestor a{
+	border-bottom: 2px solid black;
+	color: black;
+}

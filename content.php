@@ -1,8 +1,14 @@
 <article class="post <?php if(has_post_thumbnail() && (is_home() OR is_search() OR is_archive())): ?> newdisplay <?php endif; ?>">
 
-	<div class="post-thumbnail">
-		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('front-thumbnail'); ?> </a>
-	</div>
+	<?php if(is_home()): ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('blog-thumbnail'); ?> </a>
+		</div>	
+	<?php else: ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('front-thumbnail'); ?> </a>
+		</div>
+	<?php endif; ?>
 
 	<div class="<?php if(has_post_thumbnail() && (is_home() OR is_search() OR is_archive())): ?> text-post <?php endif; ?>">
 
